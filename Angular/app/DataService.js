@@ -1,21 +1,78 @@
 ﻿
 angularFormsApp.factory('DataService',
     function () {
+
+        var workingDecision = {
+            id: 0,
+            sessionName: "testData",
+            decisionArray: [
+                    {
+                        name: "iPhone",
+                        criteriaArray: [
+                            {
+                                name: "design",
+                                rate: 1,
+                                value: "brand",
+                                valueRate: 1
+                            },
+                            {
+                                name: "price",
+                                rate: 1,
+                                value: "1000",
+                                valueRate: 1
+                            }
+                        ]
+                    },
+                    {
+                        name: "Nokia Lumia 930",
+                        criteriaArray: [
+                            {
+                                name: "design",
+                                rate: 1,
+                                value: "brand",
+                                valueRate: 1
+                            },
+                            {
+                                name: "price",
+                                rate: 1,
+                                value: "400",
+                                valueRate: 1
+                            }
+                        ]
+                    },
+                    {
+                        name: "Samsung Galaxy S5",
+                        criteriaArray: [
+                            {
+                                name: "design",
+                                rate: 1,
+                                value: "brand",
+                                valueRate: 1
+                            },
+                            {
+                                name: "price",
+                                rate: 1,
+                                value: "700",
+                                valueRate: 1
+                            }
+                        ]
+                    }
+            ]
+        };
+
         var getDecision = function (id) {
-            if (id == 123) {
-                return {
-                    id: 123,
-                    sessionName: "testData",
-                    decisionArray: []
-                };
+            if (id == 0) {
+                return workingDecision;
             }
             return undefined;
         };
 
         var insertDecision = function (newDecision) {
+            workingDecision = newDecision;
             return true;
         };
         var updateDecision = function (decision) {
+            workingDecision = decision;
             return true;
         };
 

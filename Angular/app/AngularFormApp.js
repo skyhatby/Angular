@@ -5,7 +5,7 @@ angularFormsApp.config(function ($routeProvider) {
     $routeProvider
         .when("/home", {
             templateUrl: "app/Home.html",
-            controller: "HomeController"
+            controller: "homeController"
         })
         .when("/newDecision", {
             templateUrl: "app/DecisionForm/dfTemplate.html",
@@ -19,16 +19,3 @@ angularFormsApp.config(function ($routeProvider) {
             redirectTo: "/home"
         });
 });
-
-angularFormsApp.controller("HomeController",
-    function ($scope, $location, DataService) {
-
-        $scope.showCreateDecisionForm = function () {
-            $location.path('/newDecision');
-        };
-
-        $scope.showUpdateDecisionForm = function (id) {
-            $location.path('/updateDecisionForm/' + id);
-        };
-
-    });

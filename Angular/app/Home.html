@@ -1,7 +1,21 @@
-﻿
-<input type="button" class="btn btn-primary" value="Add new decision"
-       ng-click="showCreateDecisionForm()" />
-<br/>
-<br />
-<input type="button" class="btn btn-primary" value="Update decision id: 123"
-       ng-click="showUpdateDecisionForm(123)" />
+﻿<div>
+    <input type="button" class="btn btn-primary" value="Add new decision"
+           ng-click="showCreateDecisionForm()" />
+    <input type="button" class="btn btn-primary" value="Update decision"
+           ng-click="showUpdateDecisionForm(0)" />
+</div>
+<div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
+    <h4>Session Name: {{decision.sessionName}}</h4>
+    
+</div>
+<div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3">
+    Decision object:{{decisionItem.name}}
+    <h5>Criterias:</h5>
+    <ol>
+        <li ng-repeat="criteria in decisionItem.criteriaArray">
+            Name:{{criteria.name}}; Rate:{{criteria.rate}}
+            <br/>
+            Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
+        </li>
+    </ol>
+</div>
