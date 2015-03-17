@@ -10,6 +10,7 @@ angularFormsApp.controller('dfController',
 
         $scope.editableDecision = angular.copy($scope.decision);
         $scope.editableCriteria = { id: 0 };
+        $scope.editableDecisionObject = { id: 0 };
 
         $scope.submitForm = function () {
 
@@ -39,7 +40,18 @@ angularFormsApp.controller('dfController',
                 DataService.updateCriteria($scope.editableDecision);
             }
 
-            $scope.decision = angular.copy($scope.editableDecision);
+            $window.history.back();
+        };
+
+        $scope.submitDecisionObjectForm = function() {
+            if ($scope.editableDecisionObject.id == 0) {
+                //insert new Decision object
+                DataService.insertDecisionObject($scope.editableDecisionObject);
+            } else {
+                //update
+                DataService.updateDecisionObject($scope.editableDecisionObject);
+            }
+
             $window.history.back();
         };
 

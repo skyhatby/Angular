@@ -12,7 +12,11 @@
         };
 
         $scope.showAddCriteriaForm = function() {
-            $location.path('/newCriteria/');
+            $location.path('/newCriteria');
+        };
+
+        $scope.showAddDecisionObjectForm = function () {
+            $location.path('/newDecisionObject');
         };
 
     });

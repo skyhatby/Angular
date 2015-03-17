@@ -85,8 +85,20 @@ angularFormsApp.factory('DataService',
                 ];
             }
             for (var decisionId in workingDecision.decisionArray) {
+                if (workingDecision.decisionArray[decisionId].criteriaArray == undefined) {
+                    workingDecision.decisionArray[decisionId].criteriaArray = [];
+                }
                 workingDecision.decisionArray[decisionId]
                 .criteriaArray.push(newCriteria);
+            }
+            return true;
+        };
+        var insertDecisionObject = function (newDecisionObject) {
+            if (workingDecision.decisionArray == undefined) {
+                workingDecision.decisionArray = [newDecisionObject];
+            }
+            else {
+                workingDecision.decisionArray.push(newDecisionObject);
             }
             return true;
         };
@@ -95,6 +107,7 @@ angularFormsApp.factory('DataService',
             insertDecision: insertDecision,
             updateDecision: updateDecision,
             getDecision: getDecision,
-            insertCriteria: insertCriteria
+            insertCriteria: insertCriteria,
+            insertDecisionObject: insertDecisionObject
         };
     });

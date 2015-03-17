@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\DecisionForm\Templates\dfCriteriaTemplate.html" />
+    <Content Include="app\DecisionForm\Templates\dfDecisionObjectTemplate.html" />
     <Content Include="app\homeController.js" />
     <Content Include="app\Home.html" />
     <Content Include="Scripts\version.json" />
