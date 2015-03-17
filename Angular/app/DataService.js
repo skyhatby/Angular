@@ -75,10 +75,28 @@ angularFormsApp.factory('DataService',
             workingDecision = decision;
             return true;
         };
+        var insertCriteria = function (newCriteria) {
+            if (workingDecision.decisionArray == undefined) {
+                workingDecision.decisionArray = [
+                    {
+                        id: 1,
+                        criteriaArray: []
+                    }
+                ];
+            }
+            for (var decision in workingDecision.decisionArray) {
+                alert(decision);
+                debugger;
+                workingDecision.decisionArray[decision]
+                .criteriaArray.push(newCriteria);
+            }
+            return true;
+        };
 
         return {
             insertDecision: insertDecision,
             updateDecision: updateDecision,
-            getDecision: getDecision
+            getDecision: getDecision,
+            insertCriteria: insertCriteria
         };
     });

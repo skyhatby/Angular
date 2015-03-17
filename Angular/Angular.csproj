@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\DecisionForm\dfCriteriaTemplate.html" />
     <Content Include="app\homeController.js" />
     <Content Include="app\Home.html" />
     <Content Include="Scripts\version.json" />

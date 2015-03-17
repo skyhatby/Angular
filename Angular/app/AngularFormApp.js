@@ -15,6 +15,10 @@ angularFormsApp.config(function ($routeProvider) {
             templateUrl: "app/DecisionForm/dfTemplate.html",
             controller: "dfController"
         })
+        .when("/newCriteria", {
+            templateUrl: "app/DecisionForm/dfCriteriaTemplate.html",
+            controller: "dfController"
+        })
         .otherwise({
             redirectTo: "/home"
         });
