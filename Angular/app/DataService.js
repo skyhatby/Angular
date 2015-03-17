@@ -85,8 +85,6 @@ angularFormsApp.factory('DataService',
                 ];
             }
             for (var decision in workingDecision.decisionArray) {
-                alert(decision);
-                debugger;
                 workingDecision.decisionArray[decision]
                 .criteriaArray.push(newCriteria);
             }

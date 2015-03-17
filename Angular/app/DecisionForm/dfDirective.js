@@ -4,7 +4,7 @@ angularFormsApp.directive('decisionForm',
 
         return {
             restrict: 'E',
-            templateUrl: 'app/DecisionForm/dfTemplate.html'
+            templateUrl: 'app/DecisionForm/Templates/dfTemplate.html'
         };
 
     });

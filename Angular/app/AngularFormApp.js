@@ -8,15 +8,15 @@ angularFormsApp.config(function ($routeProvider) {
             controller: "homeController"
         })
         .when("/newDecision", {
-            templateUrl: "app/DecisionForm/dfTemplate.html",
+            templateUrl: "app/DecisionForm/Templates/dfTemplate.html",
             controller: "dfController"
         })
         .when("/updateDecisionForm/:id", {
-            templateUrl: "app/DecisionForm/dfTemplate.html",
+            templateUrl: "app/DecisionForm/Templates/dfTemplate.html",
             controller: "dfController"
         })
         .when("/newCriteria", {
-            templateUrl: "app/DecisionForm/dfCriteriaTemplate.html",
+            templateUrl: "app/DecisionForm/Templates/dfCriteriaTemplate.html",
             controller: "dfController"
         })
         .otherwise({
