@@ -84,8 +84,8 @@ angularFormsApp.factory('DataService',
                     }
                 ];
             }
-            for (var decision in workingDecision.decisionArray) {
-                workingDecision.decisionArray[decision]
+            for (var decisionId in workingDecision.decisionArray) {
+                workingDecision.decisionArray[decisionId]
                 .criteriaArray.push(newCriteria);
             }
             return true;
