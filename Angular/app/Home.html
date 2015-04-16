@@ -10,7 +10,7 @@
 </div>
 <div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
     <h4>Session Name: {{decision.sessionName}}</h4>
-    
+
 </div>
 <div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3">
     Decision object [{{decisionItem.id}}]: {{decisionItem.name}}
@@ -18,10 +18,10 @@
     <ol>
         <li ng-repeat="criteria in decisionItem.criteriaArray">
             Name [{{criteria.id}}]:{{criteria.name}}; Rate:{{criteria.rate}}
-            <br/>
+            <br>
             Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
             <input type="button" class="btn btn-primary" value="Update criteia"
-                   ng-click="showCriteriaToUpdateValueRate({{decisionItem.id}},{{criteria.id}})" />
+                   ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criteria.id)" />
         </li>
     </ol>
 </div>
