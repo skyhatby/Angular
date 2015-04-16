@@ -7,6 +7,7 @@ angularFormsApp.factory('DataService',
             sessionName: "testData",
             decisionArray: [
                     {
+                        id: 0,
                         name: "iPhone",
                         criteriaArray: [
                             {
@@ -24,6 +25,7 @@ angularFormsApp.factory('DataService',
                         ]
                     },
                     {
+                        id: 1,
                         name: "Nokia Lumia 930",
                         criteriaArray: [
                             {
@@ -41,6 +43,7 @@ angularFormsApp.factory('DataService',
                         ]
                     },
                     {
+                        id: 2,
                         name: "Samsung Galaxy S5",
                         criteriaArray: [
                             {
@@ -95,9 +98,11 @@ angularFormsApp.factory('DataService',
         };
         var insertDecisionObject = function (newDecisionObject) {
             if (workingDecision.decisionArray == undefined) {
+                newDecisionObject.id = 0;
                 workingDecision.decisionArray = [newDecisionObject];
             }
             else {
+                newDecisionObject.id = workingDecision.decisionArray.length;
                 workingDecision.decisionArray.push(newDecisionObject);
             }
             return true;

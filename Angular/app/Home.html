@@ -13,7 +13,7 @@
     
 </div>
 <div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3">
-    Decision object:{{decisionItem.name}}
+    Decision object [{{decisionItem.id}}]: {{decisionItem.name}}
     <h5>Criterias:</h5>
     <ol>
         <li ng-repeat="criteria in decisionItem.criteriaArray">
