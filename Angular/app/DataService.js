@@ -11,12 +11,14 @@ angularFormsApp.factory('DataService',
                         name: "iPhone",
                         criteriaArray: [
                             {
+                                id: 0,
                                 name: "design",
                                 rate: 1,
                                 value: "brand",
                                 valueRate: 1
                             },
                             {
+                                id: 1,
                                 name: "price",
                                 rate: 1,
                                 value: "1000",
@@ -29,12 +31,14 @@ angularFormsApp.factory('DataService',
                         name: "Nokia Lumia 930",
                         criteriaArray: [
                             {
+                                id: 0,
                                 name: "design",
                                 rate: 1,
                                 value: "brand",
                                 valueRate: 1
                             },
                             {
+                                id: 1,
                                 name: "price",
                                 rate: 1,
                                 value: "400",
@@ -47,12 +51,14 @@ angularFormsApp.factory('DataService',
                         name: "Samsung Galaxy S5",
                         criteriaArray: [
                             {
+                                id: 0,
                                 name: "design",
                                 rate: 1,
                                 value: "brand",
                                 valueRate: 1
                             },
                             {
+                                id: 1,
                                 name: "price",
                                 rate: 1,
                                 value: "700",
@@ -82,7 +88,7 @@ angularFormsApp.factory('DataService',
             if (workingDecision.decisionArray == undefined) {
                 workingDecision.decisionArray = [
                     {
-                        id: 1,
+                        id: 0,
                         criteriaArray: []
                     }
                 ];
@@ -91,6 +97,7 @@ angularFormsApp.factory('DataService',
                 if (workingDecision.decisionArray[decisionId].criteriaArray == undefined) {
                     workingDecision.decisionArray[decisionId].criteriaArray = [];
                 }
+                newCriteria.id = workingDecision.decisionArray[decisionId].criteriaArray.length;
                 workingDecision.decisionArray[decisionId]
                 .criteriaArray.push(newCriteria);
             }
