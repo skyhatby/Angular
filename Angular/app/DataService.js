@@ -89,6 +89,7 @@ angularFormsApp.factory('DataService',
                 workingDecision.decisionArray = [
                     {
                         id: 0,
+                        name: "undefined",
                         criteriaArray: []
                     }
                 ];
@@ -110,6 +111,7 @@ angularFormsApp.factory('DataService',
             }
             else {
                 newDecisionObject.id = workingDecision.decisionArray.length;
+                newDecisionObject.criteriaArray = angular.copy(workingDecision.decisionArray[0].criteriaArray);
                 workingDecision.decisionArray.push(newDecisionObject);
             }
             return true;
