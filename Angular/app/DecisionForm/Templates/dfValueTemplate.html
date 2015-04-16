@@ -1,0 +1,26 @@
+﻿<form class="form-horizontal" role="form">
+
+    <div class="form-group">
+        <label for="value" class="col-sm-3 control-label">Value</label>
+        <div class="col-sm-9">
+            <input type="text" id="value" name="value" class="form-control"
+                   ng-model="updatedCriteria.criteria.value" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="valueRate" class="col-sm-3 control-label">Rate</label>
+        <div class="col-sm-9">
+            <input type="text" id="valueRate" name="valueRate" class="form-control"
+                   ng-model="updatedCriteria.criteria.valueRate" />
+        </div>
+    </div>
+
+    <div class="col-sm-offset-3 col-sm-9">
+        <input type="button" class="btn btn-default" value="Cancel"
+               ng-click="cancelForm()" />
+        <input type="submit" class="btn btn-primary" value="Submit"
+               ng-click="submitCriteriaValueForm()" />
+    </div>
+
+</form>

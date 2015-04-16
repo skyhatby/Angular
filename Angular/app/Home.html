@@ -20,6 +20,8 @@
             Name [{{criteria.id}}]:{{criteria.name}}; Rate:{{criteria.rate}}
             <br/>
             Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
+            <input type="button" class="btn btn-primary" value="Update criteia"
+                   ng-click="showCriteriaToUpdateValueRate({{decisionItem.id}},{{criteria.id}})" />
         </li>
     </ol>
 </div>

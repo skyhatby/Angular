@@ -19,4 +19,8 @@
             $location.path('/newDecisionObject');
         };
 
+        $scope.showCriteriaToUpdateValueRate = function(id, id2) {
+            $location.path('/updateValue/' + id + '/' + id2);
+        };
+
     });
