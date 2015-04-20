@@ -5,7 +5,7 @@ angularFormsApp.controller('dfController',
         if ($routeParams.id) {
             if ($routeParams.id2) {
                 $scope.updatedCriteria = {
-                    criteria: DataService.getCriteriaToUpdateValueRate($routeParams.id, $routeParams.id2),
+                    criteria: angular.copy(DataService.getCriteriaToUpdateValueRate($routeParams.id, $routeParams.id2)),
                     ids: [$routeParams.id, $routeParams.id2]
                 };
             } else {
@@ -21,7 +21,7 @@ angularFormsApp.controller('dfController',
 
         $scope.submitForm = function () {
 
-            if ($scope.editableDecision.id == 0) {
+            if ($scope.editableDecision.id === 0) {
                 //insert new decision
                 DataService.insertDecision($scope.editableDecision);
             } else {
@@ -39,7 +39,7 @@ angularFormsApp.controller('dfController',
 
         $scope.submitCriteriaForm = function () {
 
-            if ($scope.editableCriteria.id == 0) {
+            if ($scope.editableCriteria.id === 0) {
                 //insert new Criteria
                 DataService.insertCriteria($scope.editableCriteria);
             } else {
@@ -58,7 +58,7 @@ angularFormsApp.controller('dfController',
         };
 
         $scope.submitDecisionObjectForm = function () {
-            if ($scope.editableDecisionObject.id == 0) {
+            if ($scope.editableDecisionObject.id === 0) {
                 //insert new Decision object
                 DataService.insertDecisionObject($scope.editableDecisionObject);
             } else {

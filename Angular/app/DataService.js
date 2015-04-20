@@ -70,7 +70,7 @@ angularFormsApp.factory('DataService',
         };
 
         var getDecision = function (id) {
-            if (id == 0) {
+            if (id === 0) {
                 return workingDecision;
             }
             return undefined;
@@ -95,13 +95,15 @@ angularFormsApp.factory('DataService',
                 ];
             }
             for (var decisionId in workingDecision.decisionArray) {
-                if (workingDecision.decisionArray[decisionId].criteriaArray == undefined) {
-                    workingDecision.decisionArray[decisionId].criteriaArray = [];
+                if (workingDecision.decisionArray.hasOwnProperty(decisionId)) {
+                    if (workingDecision.decisionArray[decisionId].criteriaArray == undefined) {
+                        workingDecision.decisionArray[decisionId].criteriaArray = [];
+                    }
+                    newCriteria.id = workingDecision.decisionArray[decisionId].criteriaArray.length;
+                    newCriteria.value = 0;
+                    newCriteria.valueRate = 0;
+                    workingDecision.decisionArray[decisionId].criteriaArray.push(newCriteria);
                 }
-                newCriteria.id = workingDecision.decisionArray[decisionId].criteriaArray.length;
-                newCriteria.value = 0;
-                newCriteria.valueRate = 0;
-                workingDecision.decisionArray[decisionId].criteriaArray.push(newCriteria);
             }
             return true;
         };
@@ -115,8 +117,10 @@ angularFormsApp.factory('DataService',
                 newDecisionObject.criteriaArray = angular.copy(workingDecision.decisionArray[0].criteriaArray);
 
                 for (var id in newDecisionObject.criteriaArray) {
-                    newDecisionObject.criteriaArray[id].value = 0;
-                    newDecisionObject.criteriaArray[id].valueRate = 0;
+                    if (newDecisionObject.criteriaArray.hasOwnProperty(id)) {
+                        newDecisionObject.criteriaArray[id].value = 0;
+                        newDecisionObject.criteriaArray[id].valueRate = 0;
+                    }
                 }
 
                 workingDecision.decisionArray.push(newDecisionObject);
