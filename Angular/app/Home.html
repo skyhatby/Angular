@@ -1,27 +1,34 @@
 ﻿<div>
-    <input type="button" class="btn btn-primary" value="Add new decision"
+    <input type="button" class="btn btn-primary" value="+ new decision"
            ng-click="showCreateDecisionForm()" />
     <input type="button" class="btn btn-primary" value="Update decision"
            ng-click="showUpdateDecisionForm(0)" />
-    <input type="button" class="btn btn-primary" value="Add Criteria"
-           ng-click="showAddCriteriaForm()" />
-    <input type="button" class="btn btn-primary" value="Add Decision Object"
+    <input type="button" class="btn btn-primary" value="+ Decision Object"
            ng-click="showAddDecisionObjectForm()" />
+    <input type="button" class="btn btn-primary" value="+ Criteria"
+           ng-click="showAddCriteriaForm()" />
 </div>
 <div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
-    <h4>Session Name: {{decision.sessionName}}</h4>
+    <h4><em>Session Name: {{decision.sessionName}}</em></h4>
 
 </div>
-<div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3">
-    Decision object: {{decisionItem.name}}
-    <h5>Criterias:</h5>
-    <ol>
-        <li ng-repeat="criteria in decisionItem.criteriaArray">
-            Name:{{criteria.name}}; Rate:{{criteria.rate}}
-            <br>
-            Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
-            <input type="button" class="btn btn-primary" value="Update criteia"
-                   ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criteria.id)" />
-        </li>
-    </ol>
+<div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3 list-group">
+    <div class="list-group-item">
+        <h3 class="list-group-item-heading">
+            Object:
+        </h3>
+        <h4>{{decisionItem.name}}</h4>
+        <h5 class="list-group-item-heading">Criterias:</h5>
+        <ol>
+            <li ng-repeat="criteria in decisionItem.criteriaArray">
+                Name:{{criteria.name}}; Rate:{{criteria.rate}}
+                <br>
+                Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
+                <div>
+                <input type="button" class="btn btn-warning" value="Update criteia"
+                       ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criteria.id)" />
+                </div>
+            </li>
+        </ol>
+    </div>
 </div>
