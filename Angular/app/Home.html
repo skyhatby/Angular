@@ -13,11 +13,11 @@
 
 </div>
 <div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3">
-    Decision object [{{decisionItem.id}}]: {{decisionItem.name}}
+    Decision object: {{decisionItem.name}}
     <h5>Criterias:</h5>
     <ol>
         <li ng-repeat="criteria in decisionItem.criteriaArray">
-            Name [{{criteria.id}}]:{{criteria.name}}; Rate:{{criteria.rate}}
+            Name:{{criteria.name}}; Rate:{{criteria.rate}}
             <br>
             Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
             <input type="button" class="btn btn-primary" value="Update criteia"
