@@ -1,34 +1,58 @@
 ﻿<div>
     <input type="button" class="btn btn-primary" value="+ new decision"
-           ng-click="showCreateDecisionForm()" />
+           ng-click="showCreateDecisionForm()"/>
     <input type="button" class="btn btn-primary" value="Update decision"
-           ng-click="showUpdateDecisionForm(0)" />
+           ng-click="showUpdateDecisionForm(0)"/>
     <input type="button" class="btn btn-primary" value="+ Decision Object"
-           ng-click="showAddDecisionObjectForm()" />
-    <input type="button" class="btn btn-primary" value="+ Criteria"
-           ng-click="showAddCriterionForm()" />
+           ng-click="showAddDecisionObjectForm()"/>
+    <input type="button" class="btn btn-primary" value="+ Criterion"
+           ng-click="showAddCriterionForm()"/>
 </div>
-<div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
-    <h4><em>Session Name: {{decision.sessionName}}</em></h4>
 
+<br/>
+
+<div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
+    <h4>
+        <em>Decision: {{decision.sessionName}}</em>
+    </h4>
 </div>
+
 <div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3 list-group">
+    
     <div class="list-group-item">
-        <h3 class="list-group-item-heading">
-            Object:
-        </h3>
+        <h4>{{decisionItem.name}}:</h4>
+        <ul ng-repeat="criterion in decisionItem.criteriaArray" class="list-group">
+            <li class="list-group-item">
+                <span class="badge" title="Rate">{{criterion.rate}}</span>
+                {{criterion.id+1}}.&nbsp;{{criterion.name}}:
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge" title="Rate">{{criterion.valueRate}}</span>
+                        {{criterion.value}}
+                        <div>
+                            <input type="button" class="btn btn-warning" value="Update value"
+                                   ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criterion.id)"/>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--<div ng-repeat="decisionItem in decision.decisionArray" class="col-sm-3 list-group">
+    <div class="list-group-item">
         <h4>{{decisionItem.name}}</h4>
-        <h5 class="list-group-item-heading">Criterias:</h5>
+        <h5 class="list-group-item-heading">Criteria:</h5>
         <ol>
             <li ng-repeat="criterion in decisionItem.criteriaArray">
-                Name:{{criterion.name}}; Rate:{{criterion.rate}}
-                <br>
-                Value:{{criterion.value}}; Rate:{{criterion.valueRate}}
+                <h5>{{criterion.name}}:<span class="badge" title="Rate">{{criterion.rate}}</span></h5>
+                {{criterion.value}} <span class="badge" title="Rate">{{criterion.valueRate}}</span>
                 <div>
-                    <input type="button" class="btn btn-warning" value="Update criteia"
+                    <input type="button" class="btn btn-warning" value="Update criterion"
                            ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criterion.id)" />
                 </div>
             </li>
         </ol>
     </div>
-</div>
+</div>-->
