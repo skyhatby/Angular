@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\DecisionForm\Templates\dfCriteriaTemplate.html" />
+    <Content Include="app\DecisionForm\Templates\dfCriterionTemplate.html" />
     <Content Include="app\DecisionForm\Templates\dfDecisionObjectTemplate.html" />
     <Content Include="app\DecisionForm\Templates\dfValueTemplate.html" />
     <Content Include="app\homeController.js" />

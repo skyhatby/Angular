@@ -6,7 +6,7 @@
     <input type="button" class="btn btn-primary" value="+ Decision Object"
            ng-click="showAddDecisionObjectForm()" />
     <input type="button" class="btn btn-primary" value="+ Criteria"
-           ng-click="showAddCriteriaForm()" />
+           ng-click="showAddCriterionForm()" />
 </div>
 <div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
     <h4><em>Session Name: {{decision.sessionName}}</em></h4>
@@ -20,13 +20,13 @@
         <h4>{{decisionItem.name}}</h4>
         <h5 class="list-group-item-heading">Criterias:</h5>
         <ol>
-            <li ng-repeat="criteria in decisionItem.criteriaArray">
-                Name:{{criteria.name}}; Rate:{{criteria.rate}}
+            <li ng-repeat="criterion in decisionItem.criteriaArray">
+                Name:{{criterion.name}}; Rate:{{criterion.rate}}
                 <br>
-                Value:{{criteria.value}}; Rate:{{criteria.valueRate}}
+                Value:{{criterion.value}}; Rate:{{criterion.valueRate}}
                 <div>
                     <input type="button" class="btn btn-warning" value="Update criteia"
-                           ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criteria.id)" />
+                           ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criterion.id)" />
                 </div>
             </li>
         </ol>

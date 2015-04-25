@@ -4,8 +4,8 @@ angularFormsApp.controller('dfController',
 
         if ($routeParams.id) {
             if ($routeParams.id2) {
-                $scope.updatedCriteria = {
-                    criteria: angular.copy(DataService.getCriteriaToUpdateValueRate($routeParams.id, $routeParams.id2)),
+                $scope.updatedCriterion = {
+                    criterion: angular.copy(DataService.getCriterionToUpdateValueRate($routeParams.id, $routeParams.id2)),
                     ids: [$routeParams.id, $routeParams.id2]
                 };
             } else {
@@ -16,7 +16,7 @@ angularFormsApp.controller('dfController',
         }
 
         $scope.editableDecision = angular.copy($scope.decision);
-        $scope.editableCriteria = { id: 0 };
+        $scope.editableCriterion = { id: 0 };
         $scope.editableDecisionObject = { id: 0 };
 
         $scope.submitForm = function () {
@@ -37,11 +37,11 @@ angularFormsApp.controller('dfController',
             $window.history.back();
         };
 
-        $scope.submitCriteriaForm = function () {
+        $scope.submitCriterionForm = function () {
 
-            if ($scope.editableCriteria.id === 0) {
+            if ($scope.editableCriterion.id === 0) {
                 //insert new Criteria
-                DataService.insertCriteria($scope.editableCriteria);
+                DataService.insertCriteria($scope.editableCriterion);
             } else {
                 //update
                 DataService.updateCriteria($scope.editableDecision);
@@ -50,9 +50,9 @@ angularFormsApp.controller('dfController',
             $window.history.back();
         };
 
-        $scope.submitCriteriaValueForm = function () {
+        $scope.submitCriterionValueForm = function () {
 
-            DataService.updateValueAndRate($scope.updatedCriteria.ids[0], $scope.updatedCriteria.ids[1], $scope.updatedCriteria.criteria);
+            DataService.updateValueAndRate($scope.updatedCriterion.ids[0], $scope.updatedCriterion.ids[1], $scope.updatedCriterion.criterion);
 
             $window.history.back();
         };

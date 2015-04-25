@@ -84,7 +84,7 @@ angularFormsApp.factory('DataService',
             workingDecision = decision;
             return true;
         };
-        var insertCriteria = function (newCriteria) {
+        var insertCriteria = function (newCriterion) {
             if (workingDecision.decisionArray == undefined) {
                 workingDecision.decisionArray = [
                     {
@@ -99,10 +99,10 @@ angularFormsApp.factory('DataService',
                     if (workingDecision.decisionArray[decisionId].criteriaArray == undefined) {
                         workingDecision.decisionArray[decisionId].criteriaArray = [];
                     }
-                    newCriteria.id = workingDecision.decisionArray[decisionId].criteriaArray.length;
-                    newCriteria.value = 0;
-                    newCriteria.valueRate = 0;
-                    workingDecision.decisionArray[decisionId].criteriaArray.push(newCriteria);
+                    newCriterion.id = workingDecision.decisionArray[decisionId].criteriaArray.length;
+                    newCriterion.value = 0;
+                    newCriterion.valueRate = 0;
+                    workingDecision.decisionArray[decisionId].criteriaArray.push(newCriterion);
                 }
             }
             return true;
@@ -128,7 +128,7 @@ angularFormsApp.factory('DataService',
             return true;
         };
 
-        var getCriteriaToUpdateValueRate = function (id, id2) {
+        var getCriterionToUpdateValueRate = function (id, id2) {
             return workingDecision.decisionArray[id].criteriaArray[id2];
         };
 
@@ -143,7 +143,7 @@ angularFormsApp.factory('DataService',
             getDecision: getDecision,
             insertCriteria: insertCriteria,
             insertDecisionObject: insertDecisionObject,
-            getCriteriaToUpdateValueRate: getCriteriaToUpdateValueRate,
+            getCriterionToUpdateValueRate: getCriterionToUpdateValueRate,
             updateValueAndRate: updateValueAndRate
         };
     });

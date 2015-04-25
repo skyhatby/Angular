@@ -11,8 +11,8 @@
             $location.path('/updateDecisionForm/' + id);
         };
 
-        $scope.showAddCriteriaForm = function() {
-            $location.path('/newCriteria');
+        $scope.showAddCriterionForm = function() {
+            $location.path('/newCriterion');
         };
 
         $scope.showAddDecisionObjectForm = function () {

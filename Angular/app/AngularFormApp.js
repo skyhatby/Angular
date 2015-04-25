@@ -15,8 +15,8 @@ angularFormsApp.config(function ($routeProvider) {
             templateUrl: "app/DecisionForm/Templates/dfTemplate.html",
             controller: "dfController"
         })
-        .when("/newCriteria", {
-            templateUrl: "app/DecisionForm/Templates/dfCriteriaTemplate.html",
+        .when("/newCriterion", {
+            templateUrl: "app/DecisionForm/Templates/dfCriterionTemplate.html",
             controller: "dfController"
         })
         .when("/updateValue/:id/:id2", {
