@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular", "Angular\Angular.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngularLearning", "AngularLearning", "{AE3CBB12-6D39-4AE9-907A-176A89FBFC12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{1A45E048-4CBF-461D-9CAB-D8C674407699}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.WebApp", "WebApp\Kon.Voi.WebApp.csproj", "{1A45E048-4CBF-461D-9CAB-D8C674407699}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D2D19959-968C-4F15-A0F2-478DC1ED3655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +31,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C} = {AE3CBB12-6D39-4AE9-907A-176A89FBFC12}
+		{1A45E048-4CBF-461D-9CAB-D8C674407699} = {D2D19959-968C-4F15-A0F2-478DC1ED3655}
 	EndGlobalSection
 EndGlobal
