@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngularLearning", "AngularL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{1A45E048-4CBF-461D-9CAB-D8C674407699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.Model", "..\Diplom\kon-voi-diplom\Kon.Voi.Model\Kon.Voi.Model.csproj", "{F830F7B6-BF16-44B1-89C8-F993170EF083}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F830F7B6-BF16-44B1-89C8-F993170EF083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F830F7B6-BF16-44B1-89C8-F993170EF083}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F830F7B6-BF16-44B1-89C8-F993170EF083}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F830F7B6-BF16-44B1-89C8-F993170EF083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
