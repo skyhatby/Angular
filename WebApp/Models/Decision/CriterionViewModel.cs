@@ -27,7 +27,7 @@
         /// <value>
         /// The rate.
         /// </value>
-        public string Rate { get; set; }
+        public int Rate { get; set; }
 
         /// <summary>
         /// Gets or sets the value.
@@ -43,6 +43,6 @@
         /// <value>
         /// The value rate.
         /// </value>
-        public string ValueRate { get; set; }
+        public int ValueRate { get; set; }
     }
 }
