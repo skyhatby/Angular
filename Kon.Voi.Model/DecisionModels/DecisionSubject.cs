@@ -1,9 +1,11 @@
-﻿namespace Kon.Voi.Model.Decision
+﻿using System.Collections.Generic;
+
+namespace Kon.Voi.Model.DecisionModels
 {
     /// <summary>
     /// 
     /// </summary>
-    public class Criterion
+    public class DecisionSubject
     {
         /// <summary>
         /// Gets or sets the identifier.
@@ -22,27 +24,19 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the rate.
+        /// Gets or sets the final rate.
         /// </summary>
         /// <value>
-        /// The rate.
+        /// The final rate.
         /// </value>
-        public int Rate { get; set; }
+        public double FinalRate { get; set; }
 
         /// <summary>
-        /// Gets or sets the value.
+        /// Gets or sets the criteria array.
         /// </summary>
         /// <value>
-        /// The value.
+        /// The criteria array.
         /// </value>
-        public string Value { get; set; }
-
-        /// <summary>
-        /// Gets or sets the value rate.
-        /// </summary>
-        /// <value>
-        /// The value rate.
-        /// </value>
-        public int ValueRate { get; set; }
+        public IList<Criterion> CriteriaArray { get; set; }
     }
 }

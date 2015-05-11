@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Kon.Voi.Model.Decision
+namespace Kon.Voi.Model.DecisionModels
 {
     /// <summary>
     /// 

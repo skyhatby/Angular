@@ -39,9 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Decision\Criterion.cs" />
-    <Compile Include="Decision\Decision.cs" />
-    <Compile Include="Decision\DecisionSubject.cs" />
+    <Compile Include="DecisionModels\Criterion.cs" />
+    <Compile Include="DecisionModels\Decision.cs" />
+    <Compile Include="DecisionModels\DecisionSubject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
