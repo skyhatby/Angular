@@ -24,7 +24,7 @@
         };
 
         $scope.submitForm = function () {
-            $http.post('http://localhost:1200/api/Decision', JSON.stringify(DataService.getDecision(0))).success(function () {
+            $http.post('/api/Decision', JSON.stringify(DataService.getDecision(0))).success(function () {
                 alert("ok");
             });
         }

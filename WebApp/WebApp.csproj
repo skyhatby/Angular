@@ -213,9 +213,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CriterionViewModel.cs" />
-    <Compile Include="Models\DecisionViewModel.cs" />
-    <Compile Include="Models\DecisionSubjectViewModel.cs" />
+    <Compile Include="Models\Decision\CriterionViewModel.cs" />
+    <Compile Include="Models\Decision\DecisionViewModel.cs" />
+    <Compile Include="Models\Decision\DecisionSubjectViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeViewModels.cs" />
