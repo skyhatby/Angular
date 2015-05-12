@@ -104,8 +104,9 @@ namespace Kon.Voi.Math.UnitTests
         {
             var mathManager = GetMathManager();
             var decisionSession = GetDecision();
-            mathManager.CountDecision(decisionSession);
+
             mathManager.CountGlobalDecision(decisionSession);
+
             foreach (var decisionSubject in decisionSession.DecisionArray)
             {
                 Console.WriteLine("Global Decision : " + decisionSubject.FinalRate);

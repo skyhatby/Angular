@@ -21,14 +21,6 @@ namespace Kon.Voi.Math
         /// <exception cref="ArgumentOutOfRangeException"><paramref /> is not a valid index in the <see cref="T:System.Collections.Generic.IList`1" />.</exception>
         /// <exception cref="NotSupportedException">The property is set and the <see cref="T:System.Collections.Generic.IList`1" /> is read-only.</exception>
         Model.DecisionModels.Decision CountGlobalDecision(Model.DecisionModels.Decision decisionSession);
-
-        /// <summary>
-        /// Counts the decision.
-        /// </summary>
-        /// <param name="decisionSession">The decision session.</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"><paramref /> or <paramref /> is null.</exception>
-        Model.DecisionModels.Decision CountDecision(Model.DecisionModels.Decision decisionSession);
     }
 
     /// <summary>
@@ -100,7 +92,7 @@ namespace Kon.Voi.Math
         /// <param name="decisionSession">The decision session.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref /> or <paramref /> is null.</exception>
-        public Model.DecisionModels.Decision CountDecision(Model.DecisionModels.Decision decisionSession)
+        private Model.DecisionModels.Decision CountDecision(Model.DecisionModels.Decision decisionSession)
         {
             foreach (DecisionSubject decisionSubject in decisionSession.DecisionArray)
             {
