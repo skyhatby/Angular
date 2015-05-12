@@ -4,9 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Kon.Voi.Model.DecisionModels.ViewModels;
 using Kon.Voi.Workflow.Decision;
+using Microsoft.Practices.Unity;
 using WebApp.Models;
-using WebApp.Models.Decision;
 
 namespace WebApp.Controllers
 {
@@ -19,10 +20,10 @@ namespace WebApp.Controllers
         /// Initializes a new instance of the <see cref="DecisionController"/> class.
         /// </summary>
         /// <param name="decisionWorkflow">The decision workflow.</param>
-        public DecisionController(IDecisionWorkflow decisionWorkflow)
-        {
-            this.DecisionWorkflow = decisionWorkflow;
-        }
+        //public DecisionController(IDecisionWorkflow decisionWorkflow)
+        //{
+        //    this.DecisionWorkflow = decisionWorkflow;
+        //}
 
         /// <summary>
         /// Gets or sets the decision workflow.
@@ -30,6 +31,7 @@ namespace WebApp.Controllers
         /// <value>
         /// The decision workflow.
         /// </value>
+        [Dependency]
         public IDecisionWorkflow DecisionWorkflow { get; set; }
 
         // POST api/values
@@ -40,9 +42,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public DecisionViewModel Post([FromBody]DecisionViewModel decisionViewModel)
         {
-
-
-            return decisionViewModel;
+            return this.DecisionWorkflow.CountDecision(decisionViewModel);
         }
     }
 }

@@ -27,7 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{3BBF8634
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.Workflow", "Kon.Voi.Workflow\Kon.Voi.Workflow.csproj", "{3150D4EA-7A5D-4491-8D72-BA271BF943F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.WorkflowTests", "Kon.Voi.WorkflowTests\Kon.Voi.WorkflowTests.csproj", "{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.WorkflowUnitTests", "Kon.Voi.WorkflowTests\Kon.Voi.WorkflowUnitTests.csproj", "{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{8CC0B547-73C6-4A8B-A359-4A94EC6BC206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.WorkflowIntegrationTests", "Kon.Voi.WorkflowIntegrationTests\Kon.Voi.WorkflowIntegrationTests.csproj", "{62E8D8F9-EE02-487D-90A7-3BAB675587F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,10 @@ Global
 		{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E8D8F9-EE02-487D-90A7-3BAB675587F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E8D8F9-EE02-487D-90A7-3BAB675587F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E8D8F9-EE02-487D-90A7-3BAB675587F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E8D8F9-EE02-487D-90A7-3BAB675587F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +84,7 @@ Global
 		{6B4385F5-56B0-4916-A07E-80187C376C69} = {E56172DB-CC75-4E97-B885-0D72D0BA6A7C}
 		{3150D4EA-7A5D-4491-8D72-BA271BF943F8} = {3BBF8634-96A1-4FB5-A92D-EE327DA34281}
 		{EFA8ED79-83A8-4F22-ADD0-2536337F47D3} = {E56172DB-CC75-4E97-B885-0D72D0BA6A7C}
+		{8CC0B547-73C6-4A8B-A359-4A94EC6BC206} = {D1E31EBB-86E9-490F-8501-52398FE392D8}
+		{62E8D8F9-EE02-487D-90A7-3BAB675587F4} = {8CC0B547-73C6-4A8B-A359-4A94EC6BC206}
 	EndGlobalSection
 EndGlobal

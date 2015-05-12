@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Kon.Voi.Model.DecisionModels;
+using Kon.Voi.Model.DecisionModels.ViewModels;
 using Microsoft.Owin;
 using Owin;
-using WebApp.Models.Decision;
 
 [assembly: OwinStartup(typeof(WebApp.Startup))]
 
