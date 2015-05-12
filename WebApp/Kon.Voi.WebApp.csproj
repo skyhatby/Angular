@@ -1127,6 +1127,10 @@
       <Project>{20319a1c-df61-404e-ab93-2e5cccb111dd}</Project>
       <Name>Kon.Voi.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Kon.Voi.Workflow\Kon.Voi.Workflow.csproj">
+      <Project>{3150d4ea-7a5d-4491-8d72-ba271bf943f8}</Project>
+      <Name>Kon.Voi.Workflow</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

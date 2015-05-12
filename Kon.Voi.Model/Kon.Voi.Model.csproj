@@ -42,6 +42,9 @@
     <Compile Include="DecisionModels\Criterion.cs" />
     <Compile Include="DecisionModels\Decision.cs" />
     <Compile Include="DecisionModels\DecisionSubject.cs" />
+    <Compile Include="DecisionModels\ViewModels\CriterionViewModel.cs" />
+    <Compile Include="DecisionModels\ViewModels\DecisionSubjectViewModel.cs" />
+    <Compile Include="DecisionModels\ViewModels\DecisionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

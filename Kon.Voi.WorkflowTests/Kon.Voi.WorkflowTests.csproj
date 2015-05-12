@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B4385F5-56B0-4916-A07E-80187C376C69}</ProjectGuid>
+    <ProjectGuid>{EFA8ED79-83A8-4F22-ADD0-2536337F47D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kon.Voi.Math.UnitTests</RootNamespace>
-    <AssemblyName>Kon.Voi.Math.UnitTests</AssemblyName>
+    <RootNamespace>Kon.Voi.WorkflowTests</RootNamespace>
+    <AssemblyName>Kon.Voi.WorkflowTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,17 +54,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MathManagerTest.cs" />
+    <Compile Include="DecisionWorkflowTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Kon.Voi.Math\Kon.Voi.Math.csproj">
-      <Project>{36db7a36-c480-49c2-9475-7a144e42f77d}</Project>
-      <Name>Kon.Voi.Math</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Kon.Voi.Model\Kon.Voi.Model.csproj">
       <Project>{20319a1c-df61-404e-ab93-2e5cccb111dd}</Project>
       <Name>Kon.Voi.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kon.Voi.Workflow\Kon.Voi.Workflow.csproj">
+      <Project>{3150d4ea-7a5d-4491-8d72-ba271bf943f8}</Project>
+      <Name>Kon.Voi.Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using AutoMapper;
 using Kon.Voi.Math;
 using Kon.Voi.Math.Decision;
+using Kon.Voi.Model.DecisionModels.ViewModels;
 
 namespace Kon.Voi.Workflow.Decision
 {
@@ -54,7 +56,7 @@ namespace Kon.Voi.Workflow.Decision
     /// <summary>
     /// 
     /// </summary>
-    public class DecisionWorkflow
+    public class DecisionWorkflow : IDecisionWorkflow
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DecisionWorkflow"/> class.
@@ -79,12 +81,16 @@ namespace Kon.Voi.Workflow.Decision
         /// Counts the decision.
         /// </summary>
         /// <param name="decision">The decision.</param>
-        public void CountDecision(Model.DecisionModels.Decision decision)
+        public DecisionViewModel CountDecision(DecisionViewModel decision)
         {
+            Model.DecisionModels.Decision workflowDecision = Mapper.Map<Model.DecisionModels.Decision>(decision);
+
             foreach (IDecisionExecutionComponent decisionExecutionComponent in this.DecisionExecutionComponents)
             {
-                decisionExecutionComponent.Execute(decision);
+                decisionExecutionComponent.Execute(workflowDecision);
             }
+
+            return Mapper.Map<DecisionViewModel>(workflowDecision);
         }
     }
 }
