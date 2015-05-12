@@ -44,5 +44,21 @@
         /// The value rate.
         /// </value>
         public int ValueRate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the criterion priority.
+        /// </summary>
+        /// <value>
+        /// The criterion priority.
+        /// </value>
+        public double CriterionPriority { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value priority.
+        /// </summary>
+        /// <value>
+        /// The value priority.
+        /// </value>
+        public double ValuePriority { get; set; }
     }
 }
