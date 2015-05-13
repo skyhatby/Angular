@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular", "Angular\Angular.csproj", "{5983CA9F-3068-4436-AC5F-9EF1FDA4727C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngularLearning", "AngularLearning", "{AE3CBB12-6D39-4AE9-907A-176A89FBFC12}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kon.Voi.WebApp", "WebApp\Kon.Voi.WebApp.csproj", "{1A45E048-4CBF-461D-9CAB-D8C674407699}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D2D19959-968C-4F15-A0F2-478DC1ED3655}"
@@ -39,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A45E048-4CBF-461D-9CAB-D8C674407699}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -76,7 +68,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5983CA9F-3068-4436-AC5F-9EF1FDA4727C} = {AE3CBB12-6D39-4AE9-907A-176A89FBFC12}
 		{1A45E048-4CBF-461D-9CAB-D8C674407699} = {D2D19959-968C-4F15-A0F2-478DC1ED3655}
 		{20319A1C-DF61-404E-AB93-2E5CCCB111DD} = {5F496393-5AB7-4D8F-8B27-6E130938C47D}
 		{36DB7A36-C480-49C2-9475-7A144E42F77D} = {5F496393-5AB7-4D8F-8B27-6E130938C47D}
