@@ -21,9 +21,13 @@ namespace WebApp
         /// </summary>
         public static void Configure()
         {
-            Mapper.CreateMap<Criterion, CriterionViewModel>();
             Mapper.CreateMap<Decision, DecisionViewModel>();
             Mapper.CreateMap<DecisionSubject, DecisionSubjectViewModel>();
+            Mapper.CreateMap<Criterion, CriterionViewModel>();
+
+            Mapper.CreateMap<DecisionViewModel, Decision>();
+            Mapper.CreateMap<DecisionSubjectViewModel, DecisionSubject>();
+            Mapper.CreateMap<CriterionViewModel, Criterion>();
         }
     }
 

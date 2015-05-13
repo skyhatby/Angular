@@ -14,16 +14,17 @@ namespace WebApp.Controllers
     /// <summary>
     /// 
     /// </summary>
+    //[Authorize]
     public class DecisionController : ApiController
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DecisionController"/> class.
         /// </summary>
         /// <param name="decisionWorkflow">The decision workflow.</param>
-        //public DecisionController(IDecisionWorkflow decisionWorkflow)
-        //{
-        //    this.DecisionWorkflow = decisionWorkflow;
-        //}
+        public DecisionController(IDecisionWorkflow decisionWorkflow)
+        {
+            this.DecisionWorkflow = decisionWorkflow;
+        }
 
         /// <summary>
         /// Gets or sets the decision workflow.
@@ -31,7 +32,7 @@ namespace WebApp.Controllers
         /// <value>
         /// The decision workflow.
         /// </value>
-        [Dependency]
+        //[Dependency]
         public IDecisionWorkflow DecisionWorkflow { get; set; }
 
         // POST api/values

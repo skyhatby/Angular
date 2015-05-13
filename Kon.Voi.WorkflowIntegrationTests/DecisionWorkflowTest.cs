@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Web.Mvc;
+using Kon.Voi.Model.DecisionModels.ViewModels;
+using Kon.Voi.Workflow.Decision;
 using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Practices.Unity.Mvc;
+using WebApp;
 
 namespace Kon.Voi.WorkflowIntegrationTests
 {
@@ -16,7 +20,7 @@ namespace Kon.Voi.WorkflowIntegrationTests
         /// </summary>
         public DecisionWorkflowTest()
         {
-            this.UnityContainer = new UnityDependencyResolver(WebApp.App_Start.UnityConfig.GetConfiguredContainer());
+            this.DependencyResolver = new UnityDependencyResolver(WebApp.App_Start.UnityConfig.GetConfiguredContainer());
         }
         /// <summary>
         /// Gets or sets the unity container.
@@ -24,12 +28,27 @@ namespace Kon.Voi.WorkflowIntegrationTests
         /// <value>
         /// The unity container.
         /// </value>
-        public UnityDependencyResolver UnityContainer { get; set; }
+        public UnityDependencyResolver DependencyResolver { get; set; }
 
+        /// <summary>
+        /// Gets or sets the decision workflow.
+        /// </summary>
+        /// <value>
+        /// The decision workflow.
+        /// </value>
+        public IDecisionWorkflow DecisionWorkflow { get; set; }
+
+        /// <summary>
+        /// Decisions the workflow count decision when passed normal data than returns correct data.
+        /// </summary>
         [TestMethod]
-        public void TestMethod1()
+        public void DecisionWorkflowCountDecision_PassedNormalData_returnsCorrectData()
         {
+            AutoMapperConfiguration.Configure();
+            this.DecisionWorkflow = DependencyResolver.GetService<IDecisionWorkflow>();
+            DecisionViewModel decisionViewModel = new DecisionViewModel();
 
+            this.DecisionWorkflow.CountDecision(decisionViewModel);
             //var c = UnityContainer.
 
         }

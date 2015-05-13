@@ -43,6 +43,7 @@ namespace WebApp.App_Start
             Kon.Voi.Workflow.UnityConfig.RegisterTypes(container);
 
             container.RegisterType<AccountController>(new InjectionConstructor());
+            //container.RegisterType<DecisionController>(new InjectionConstructor());
 
             container.RegisterType<IDecisionWorkflow, DecisionWorkflow>();
         }
