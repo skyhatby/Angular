@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Kon.Voi.Model.DecisionModels.ViewModels;
 using Kon.Voi.Workflow.Decision;
-using Microsoft.Practices.Unity;
-using WebApp.Models;
 
 namespace WebApp.Controllers
 {

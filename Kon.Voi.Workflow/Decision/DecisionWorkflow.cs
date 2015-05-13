@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using Kon.Voi.Math;
 using Kon.Voi.Math.Decision;
+using Kon.Voi.Model.DecisionModels;
 using Kon.Voi.Model.DecisionModels.ViewModels;
 
 namespace Kon.Voi.Workflow.Decision
@@ -56,6 +57,25 @@ namespace Kon.Voi.Workflow.Decision
     /// <summary>
     /// 
     /// </summary>
+    public class DecisionResultWorkflowComponent : IDecisionExecutionComponent
+    {
+        /// <summary>
+        /// Executes this instance.
+        /// </summary>
+        /// <param name="decisionSession">The decision session.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
+        public void Execute(Model.DecisionModels.Decision decisionSession)
+        {
+            foreach (DecisionSubject decisionSubject in decisionSession.DecisionArray)
+            {
+                decisionSubject.FinalRate = System.Math.Round(decisionSubject.FinalRate * 100);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class DecisionWorkflow : IDecisionWorkflow
     {
         /// <summary>
@@ -65,7 +85,8 @@ namespace Kon.Voi.Workflow.Decision
         {
             this.DecisionExecutionComponents = new List<IDecisionExecutionComponent>
             {
-                new DecisionCountComponent(mathManager)
+                new DecisionCountComponent(mathManager),
+                new DecisionResultWorkflowComponent()
             };
         }
 

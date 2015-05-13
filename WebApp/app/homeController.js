@@ -24,8 +24,9 @@
         };
 
         $scope.submitForm = function () {
-            $http.post('/api/Decision', JSON.stringify(DataService.getDecision(0))).success(function () {
-                alert("ok");
+            $http.post('/api/Decision', JSON.stringify(DataService.getDecision(0))).success(function (data, status, headers, config) {
+                DataService.insertDecision(data);
+                $scope.decision = data;
             });
         }
 
