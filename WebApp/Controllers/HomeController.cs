@@ -5,12 +5,20 @@ using System.Web.Mvc;
 
 namespace WebApp.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Authorize]
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Indexes this instance.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
-            return View();
+            ViewBag.Title = "Decision";
+            return this.View();
         }
     }
 }

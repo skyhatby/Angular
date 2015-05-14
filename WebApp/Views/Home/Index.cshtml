@@ -2,6 +2,15 @@
     @Html.Partial("_Home")
 }
 @section Scripts{
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/app")
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/angular-route.min.js"></script>
+
+    <script src="../../app/AngularFormApp.js"></script>
+    <script src="../../app/DataService.js"></script>
+
+    <script src="../../app/homeController.js"></script>
+
+    <script src="../../app/DecisionForm/dfController.js"></script>
+    <script src="../../app/DecisionForm/dfDirective.js"></script>
 }

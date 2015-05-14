@@ -2,6 +2,7 @@ using System;
 using Kon.Voi.Workflow.Decision;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using WebApp.Areas.HelpPage.Controllers;
 using WebApp.Controllers;
 
 namespace WebApp.App_Start
@@ -43,7 +44,8 @@ namespace WebApp.App_Start
             Kon.Voi.Workflow.UnityConfig.RegisterTypes(container);
 
             container.RegisterType<AccountController>(new InjectionConstructor());
-            //container.RegisterType<DecisionController>(new InjectionConstructor());
+            container.RegisterType<HelpController>(new InjectionConstructor());
+            container.RegisterType<ManageController>(new InjectionConstructor());
 
             container.RegisterType<IDecisionWorkflow, DecisionWorkflow>();
         }
