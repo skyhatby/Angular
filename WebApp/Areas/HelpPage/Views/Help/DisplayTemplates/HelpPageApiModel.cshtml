@@ -1,4 +1,4 @@
-@using System.Web.Http
+﻿@using System.Web.Http
 @using System.Web.Http.Description
 @using WebApp.Areas.HelpPage.Models
 @using WebApp.Areas.HelpPage.ModelDescriptions
@@ -11,12 +11,12 @@
 <div>
     <p>@description.Documentation</p>
 
-    <h2>Request Information</h2>
+    <h2>Информация по запросу</h2>
 
-    <h3>URI Parameters</h3>
+    <h3>URI Параметры</h3>
     @Html.DisplayFor(m => m.UriParameters, "Parameters")
 
-    <h3>Body Parameters</h3>
+    <h3>Параметры тела</h3>
 
     <p>@Model.RequestDocumentation</p>
 
@@ -35,11 +35,11 @@
 
     @if (Model.SampleRequests.Count > 0)
     {
-        <h3>Request Formats</h3>
+        <h3>Формат запроса</h3>
         @Html.DisplayFor(m => m.SampleRequests, "Samples")
     }
 
-    <h2>Response Information</h2>
+    <h2>Информация ответа</h2>
 
     <h3>Resource Description</h3>
 

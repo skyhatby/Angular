@@ -1,7 +1,7 @@
 ﻿<form class="form-horizontal" role="form">
 
     <div class="form-group">
-        <label for="sessionName" class="col-sm-3 control-label">Name</label>
+        <label for="sessionName" class="col-sm-3 control-label">Имя дерева решения:</label>
         <div class="col-sm-9">
             <input type="text" id="sessionName" name="sessionName" class="form-control"
                    ng-model="editableDecision.sessionName" />
@@ -9,9 +9,9 @@
     </div>
 
     <div class="col-sm-offset-3 col-sm-9">
-        <input type="button" class="btn btn-default" value="Cancel"
+        <input type="button" class="btn btn-default" value="Отменить"
                ng-click="cancelForm()" />
-        <input type="submit" class="btn btn-primary" value="Submit"
+        <input type="submit" class="btn btn-primary" value="Подтвердить"
                ng-click="submitForm()" />
     </div>
 

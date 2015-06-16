@@ -1,4 +1,4 @@
-@using System.Net.Http.Headers
+﻿@using System.Net.Http.Headers
 @model Dictionary<MediaTypeHeaderValue, object>
 
 @{
@@ -13,12 +13,12 @@
     {
         <h4 class="sample-header">@mediaType</h4>
         <div class="sample-content">
-            <span><b>Sample:</b></span>
+            <span><b>Образец:</b></span>
             @{
                 var sample = samples[mediaType];
                 if (sample == null)
                 {
-                    <p>Sample not available.</p>
+                    <p>Образец недоступен.</p>
                 }
                 else
                 {

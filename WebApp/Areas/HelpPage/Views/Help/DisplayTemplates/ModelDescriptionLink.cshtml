@@ -1,4 +1,4 @@
-@using WebApp.Areas.HelpPage.ModelDescriptions
+﻿@using WebApp.Areas.HelpPage.ModelDescriptions
 @model Type
 @{
     ModelDescription modelDescription = ViewBag.modelDescription;
@@ -6,7 +6,7 @@
     {
         if (Model == typeof(Object))
         {
-            @:Object
+            @:Объект
         }
         else
         {
@@ -17,7 +17,7 @@
     {
         var collectionDescription = modelDescription as CollectionModelDescription;
         var elementDescription = collectionDescription.ElementDescription;
-        @:Collection of @Html.DisplayFor(m => elementDescription.ModelType, "ModelDescriptionLink", new { modelDescription = elementDescription })
+        @:Коллекция @Html.DisplayFor(m => elementDescription.ModelType, "ModelDescriptionLink", new { modelDescription = elementDescription })
     }
     else
     {

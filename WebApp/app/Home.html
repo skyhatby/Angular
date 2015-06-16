@@ -1,13 +1,13 @@
 ﻿<div>
-    <input type="button" class="btn btn-primary" value="+ new decision"
+    <input type="button" class="btn btn-primary" value="Новое дерево решения"
            ng-click="showCreateDecisionForm()"/>
-    <input type="button" class="btn btn-primary" value="Update decision"
+    <input type="button" class="btn btn-primary" value="Обновить дерево"
            ng-click="showUpdateDecisionForm(0)"/>
-    <input type="button" class="btn btn-primary" value="+ Decision Object"
+    <input type="button" class="btn btn-primary" value="+ объект решения"
            ng-click="showAddDecisionObjectForm()"/>
-    <input type="button" class="btn btn-primary" value="+ Criterion"
+    <input type="button" class="btn btn-primary" value="+ критерий"
            ng-click="showAddCriterionForm()"/>
-    <input type="button" class="btn btn-primary" value="Submit"
+    <input type="button" class="btn btn-primary" value="Подтвердить"
            ng-click="submitForm()" />
 </div>
 
@@ -15,7 +15,7 @@
 
 <div ng-model="decision.sessionName" class="col-sm-offset-3 col-sm-9">
     <h4>
-        <em>Decision: {{decision.sessionName}}</em>
+        <em>Решение: {{decision.sessionName}}</em>
     </h4>
 </div>
 
@@ -33,7 +33,7 @@
                         <span class="badge" title="Rate">{{criterion.valueRate}}</span>
                         {{criterion.value}}
                         <div>
-                            <input type="button" class="btn btn-warning" value="Update value"
+                            <input type="button" class="btn btn-warning" value="Обновить значение"
                                    ng-click="showCriteriaToUpdateValueRate(decisionItem.id,criterion.id)"/>
                         </div>
                     </li>

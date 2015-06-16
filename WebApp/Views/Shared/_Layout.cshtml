@@ -22,7 +22,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+                    <li>
+                        @Html.ActionLink("Домашняя страница", "Index", "Home", new { area = "" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("О программе", "Index", "Home", new { area = "" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Контакты", "Index", "Home", new { area = "" }, null)
+                    </li>
+                    <li>@Html.ActionLink("Decision", "Index", "Home", new { area = "" }, null)</li>
+                    @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

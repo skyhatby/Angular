@@ -1,7 +1,7 @@
 ﻿<form class="form-horizontal" role="form">
 
     <div class="form-group">
-        <label for="value" class="col-sm-3 control-label">Value</label>
+        <label for="value" class="col-sm-3 control-label">Значение критерия:</label>
         <div class="col-sm-9">
             <input type="text" id="value" name="value" class="form-control"
                    ng-model="updatedCriterion.criterion.value" />
@@ -9,7 +9,7 @@
     </div>
 
     <div class="form-group">
-        <label for="valueRate" class="col-sm-3 control-label">Rate</label>
+        <label for="valueRate" class="col-sm-3 control-label">Рейтинг значения:</label>
         <div class="col-sm-9">
             <input type="text" id="valueRate" name="valueRate" class="form-control"
                    ng-model="updatedCriterion.criterion.valueRate" />
@@ -17,9 +17,9 @@
     </div>
 
     <div class="col-sm-offset-3 col-sm-9">
-        <input type="button" class="btn btn-default" value="Cancel"
+        <input type="button" class="btn btn-default" value="Отменить"
                ng-click="cancelForm()" />
-        <input type="submit" class="btn btn-primary" value="Submit"
+        <input type="submit" class="btn btn-primary" value="Подтвердить"
                ng-click="submitCriterionValueForm()" />
     </div>
 
